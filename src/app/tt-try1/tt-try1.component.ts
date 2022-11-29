@@ -5,6 +5,7 @@ import StarterKit from '@tiptap/starter-kit';
 import * as Y from 'yjs'
 import { WebrtcProvider } from 'y-webrtc'
 import {Collaboration} from "@tiptap/extension-collaboration";
+import {CollaborationCursor} from "@tiptap/extension-collaboration-cursor";
 
 
 @Component({
@@ -19,7 +20,11 @@ export class TtTry1Component {
   provider = new WebrtcProvider('example-document', this.ydoc)
   editor = new Editor({ extensions: [
     StarterKit.configure({ history: false}),
-      Collaboration.configure({ document: this.ydoc})
+      Collaboration.configure({ document: this.ydoc}),
+      CollaborationCursor.configure({
+        provider: this.provider,
+        user: { name: 'Alice', color: 'red' }
+      })
   ] });
   value = '<p>Hello, Tiptap!</p>'; // can be HTML or JSON, see https://www.tiptap.dev/api/editor#content
 
