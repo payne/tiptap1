@@ -18,10 +18,13 @@
     "@angular/platform-browser": "^15.0.0",
     "@angular/platform-browser-dynamic": "^15.0.0",
     "@angular/router": "^15.0.0",
+    "@tiptap/extension-collaboration": "^2.0.0-beta.204",
     "@tiptap/starter-kit": "^2.0.0-beta.204",
     "ngx-tiptap": "^6.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
+    "y-webrtc": "^10.2.3",
+    "yjs": "^13.5.42",
     "zone.js": "~0.12.0"
   },
   "devDependencies": {
