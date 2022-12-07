@@ -14,6 +14,7 @@ import {CollaborationCursor} from "@tiptap/extension-collaboration-cursor";
   styleUrls: ['./tt-try1.component.scss']
 })
 export class TtTry1Component {
+  name = 'Demo';
 // A new Y document
   ydoc = new Y.Doc()
 // Registered with a WebRTC provider
@@ -23,7 +24,7 @@ export class TtTry1Component {
       Collaboration.configure({ document: this.ydoc}),
       CollaborationCursor.configure({
         provider: this.provider,
-        user: { name: 'Alice', color: 'red' }
+        user: { name: this.name, color: 'red' }
       })
   ] });
   value = '<p>Hello, Tiptap!</p>'; // can be HTML or JSON, see https://www.tiptap.dev/api/editor#content
